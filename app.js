@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const requestLogger = require('./middlewares/requestLogger');
 
 const app = express();
 

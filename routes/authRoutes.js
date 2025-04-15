@@ -1,9 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-// Placeholder route to prevent app crash
-router.get('/', (req, res) => {
-  res.send('Auth routes placeholder');
-});
+const { registerUser } = require('../controllers/auth.controller');
+
+router.post('/register', registerUser);
 
 module.exports = router;
