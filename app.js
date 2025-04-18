@@ -1,14 +1,23 @@
 const express = require('express');
-const path = require('path');
-const requestLogger = require('./middlewares/requestLogger');
-
 const app = express();
+const path = require('path');
+const requestLogger = require('./middlewares/request-logger');
+const errorHandler = require('./middlewares/error-handler');
+const registerRoutes = require('./routes/register-routes');
+
+
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+
+app.use(requestLogger);
+
 app.use(express.static(path.join(__dirname, 'public')));
 
-const authRoutes = require('./routes/authRoutes');
+
 app.use('/', authRoutes);
+
+app.use(errorHandler);
 
 module.exports = app;
