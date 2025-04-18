@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const requestLogger = require('./middlewares/request-logger');
-const errorHandler = require('./middlewares/error-handler');
-const registerRoutes = require('./routes/register-routes');
+const requestLogger = require('./middlewares/request.logger');
+const errorHandler = require('./middlewares/error.handler');
+const registerRoutes = require('./routes/auth.routes');
 
 
 

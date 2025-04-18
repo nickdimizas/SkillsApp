@@ -1,5 +1,5 @@
 module.exports = {
-  NotFoundError: require('./NotFoundError'),
-  ValidationError: require('./ValidationError'),
-  AuthError: require('./AuthError'),
+  NotFoundError: require('./not-found-error'),
+  ValidationError: require('./validation-error'),
+  AuthError: require('./auth-error'),
 };
